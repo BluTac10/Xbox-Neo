@@ -810,7 +810,7 @@ void UIScene_HUD::handleTimerComplete(int id)
 			startIndex = maxScroll;
 		}
 
-		app.DebugPrintf("handleTimerComplete: %d | %d | %d\n", maxScroll, startIndex, totalMessages);
+		//app.DebugPrintf("handleTimerComplete: %d | %d | %d\n", maxScroll, startIndex, totalMessages);
 
 		for( unsigned int i = 0; i < messagesToDisplay; ++i )
 		{

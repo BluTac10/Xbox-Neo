@@ -1109,14 +1109,12 @@ void SoundEngine::playMusicUpdate()
 
 					SetIsPlayingStreamingGameMusic(true);
 					SetIsPlayingStreamingCDMusic(false);
-					m_MusicType=eMusicType_Game;
 					m_StreamingAudioInfo.bIs3D=false;
 				}
 				else if(m_musicID<m_iStream_CD_1)
 				{
 					SetIsPlayingStreamingGameMusic(true);
 					SetIsPlayingStreamingCDMusic(false);
-					m_MusicType=eMusicType_Game;
 					m_StreamingAudioInfo.bIs3D=false;
 					// build the name
 					strcat((char *)m_szStreamName,"music/");
@@ -1128,7 +1126,6 @@ void SoundEngine::playMusicUpdate()
 				{
 					SetIsPlayingStreamingGameMusic(false);
 					SetIsPlayingStreamingCDMusic(true);
-					m_MusicType=eMusicType_CD;
 					m_StreamingAudioInfo.bIs3D=true;
 					// build the name
 					strcat((char *)m_szStreamName,"cds/");
@@ -1444,7 +1441,8 @@ void SoundEngine::playMusicUpdate()
 			bool playerInEnd=false;
 			bool playerInNether=false;
 
-			for(unsigned int i=0;i<MAX_LOCAL_PLAYERS;i++)
+			unsigned int i=0;
+			for(i=0;i<MAX_LOCAL_PLAYERS;i++)
 			{
 				if(pMinecraft->localplayers[i]!=nullptr)
 				{

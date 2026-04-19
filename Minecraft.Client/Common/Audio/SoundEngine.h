@@ -23,7 +23,6 @@ enum eMusicFiles
 	eStream_Overworld_hal4,
 	eStream_Overworld_nuance1,
 	eStream_Overworld_nuance2,
-#ifndef _XBOX
 	// Add the new music tracks
 	eStream_Overworld_Creative1,
 	eStream_Overworld_Creative2,
@@ -35,7 +34,6 @@ enum eMusicFiles
 	eStream_Overworld_Menu2,
 	eStream_Overworld_Menu3,
 	eStream_Overworld_Menu4,
-#endif
 	eStream_Overworld_piano1,
 	eStream_Overworld_piano2,
 	eStream_Overworld_piano3, // <-- make piano3 the last overworld one
